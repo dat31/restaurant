@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Klassy Cafe - Restaurant HTML Template</title>
+    <!--
+    
+TemplateMo 558 Klassy Cafe
+
+https://templatemo.com/tm-558-klassy-cafe
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="scroll-to-section"><a href="#menu">Menu</a></li>
+                            <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
+                            <li class="submenu active" id="admin-menu">
+                                <a href="javascript:void(0);">Admin</a>
+                                <ul>
+                                    <li><a href="menu.html">Menu</a></li>
+                                    <li><a href="orders.html">Orders</a></li>
+                                    <li><a href="chefs.html">Chefs</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
+                            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
+                            <li class="submenu" id="user-nav">
+                                <a href="javascript:void(0);" class="fa fa-user"></a>
+                                <ul>
+                                    <li><a href="profile.html">Profile</a></li>
+
+                                    <li><a href="orders.html">Orders</a></li>
+                                    <li id="logout-btn">
+                                        <a href="javascript:;">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Menu Start ***** -->
+    <section class="menu-section mt-4">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-form">
+                        <h4 class="mb-3">Information</h4>
+                        <form id="order-form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="numOfGuests">Number of guests</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="numOfGuests" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="datetime">Time</label>
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" id="datetime" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="status">Status</label>
+                                    <div class="input-group">
+                                        <select class="form-control" id="status" required>
+                                            <option id="submitted" value="SUBMITTED">Submitted</option>
+                                            <option id="cancelled" value="CANCELLED">Cancelled</option>
+                                            <option id="completed" value="COMPLETED">Completed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="message">Message</label>
+                                    <div class="input-group">
+                                        <textarea type="text" class="form-control" id="message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="main-button-icon mt-2" type="submit" id="submit-order-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="mb-3 d-flex justify-content-between">
+                        <h4>Order</h4>
+                        <h4 id="total-price"></h4>
+                    </div>
+                    <div id="foods-container"></div>
+                </div>
+
+                <div class="col-lg-12 mt-4">
+                    <h4 class="mb-4">Choose food</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="product-type-container" id="menu-tab" role="tablist">
+                                <div class="nav-item" role="presentation">
+                                    <div class="nav-link active" id="breakfast-tab" data-bs-toggle="tab"
+                                        data-bs-target="#breakfast-tab-pane" type="button" role="tab"
+                                        aria-controls="breakfast-tab-pane" aria-selected="true">
+                                        <img src="assets/images/tab-icon-01.png" alt="">
+                                        <p class="mt-3 font-weight-bold text-center">Breakfast</p>
+                                    </div>
+                                </div>
+                                <div class="nav-item" role="presentation">
+                                    <div class="nav-link" id="lunch-tab" data-bs-toggle="tab"
+                                        data-bs-target="#lunch-tab-pane" type="button" role="tab"
+                                        aria-controls="lunch-tab-pane" aria-selected="false">
+                                        <img src="assets/images/tab-icon-02.png" alt="">
+                                        <p class="mt-3 font-weight-bold text-center">Lunch</p>
+                                    </div>
+                                </div>
+                                <div class="nav-item" role="presentation">
+                                    <div class="nav-link" id="dinner-tab" data-bs-toggle="tab"
+                                        data-bs-target="#dinner-tab-pane" type="button" role="tab"
+                                        aria-controls="dinner-tab-pane" aria-selected="false">
+                                        <img src="assets/images/tab-icon-03.png" alt="">
+                                        <p class="mt-3 font-weight-bold text-center">Dinner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex">
+                            <div class="input-group mt-auto contact-form mt-auto mb-2">
+                                <input id="prod-search-input" type="text" class="form-control mb-0"
+                                    placeholder="Search product" aria-label="Search product"
+                                    aria-describedby="basic-addon2">
+                                <div
+                                    class="input-group-append rounded-0 search-btn main-button-icon d-flex align-items-center justify-content-center px-3">
+                                    Search
+                                </div>
+                                <div
+                                    class="create-btn input-group-append  search-btn main-button-icon d-flex align-items-center justify-content-center px-3">
+                                    Create
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content menu-container" id="myTabContent">
+                        <div class="tab-pane fade show active" id="breakfast-tab-pane" role="tabpanel"
+                            aria-labelledby="breakfast-tab" tabindex="0">
+                            <div class="products-container">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="lunch-tab-pane" role="tabpanel" aria-labelledby="lunch-tab"
+                            tabindex="0">
+                            <div class="products-container"></div>
+                        </div>
+                        <div class="tab-pane fade" id="dinner-tab-pane" role="tabpanel" aria-labelledby="dinner-tab"
+                            tabindex="0">
+                            <div class="products-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- ***** Menu End ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© Copyright Klassy Cafe Co.
+                            <br>Design: TemplateMo
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure to cancel ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="confirm-btn" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- Plugins -->
+    <script src="assets/js/js.cookie.js"></script>
+    <script src="assets/js/jquery.twbsPagination.js"></script>
+
+    <script src="assets/js/axios.js"></script>
+    <script src="assets/js/service.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="js-pages/orderDetail.js"></script>
+    <script src="assets/js/header.js"></script>
+
+</body>
+
+</html>
+
+<style>
+    .text-danger {
+        color: #fb5849 !important;
+    }
+
+    label {
+        margin-bottom: 0.375rem;
+    }
+
+    .main-button-icon :hover {
+        background-color: #8f332a !important;
+    }
+
+    #foods-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        height: 338px;
+        overflow: auto;
+    }
+
+    #total-price {
+        font-weight: 600;
+    }
+</style>

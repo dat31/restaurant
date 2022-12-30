@@ -1,0 +1,23 @@
+**database: mssql
+các table trong database:
+
+users: lưu thông tin các user
+orders: lưu các đơn order
+products: lưu các món ăn
+chefs: lưu thông tin đầu bếp
+orderItems: lưu các item của 1 order
+
+**web:
+1. jquery: là thư viện js cung cấp các hàm giúp thao tác với dom dễ dàng hơn
+2. owl-carousel: thư viện hỗ trợ tạo slide ảnh
+3. axios: thư viện hỗ trợ gửi các http request
+4. js-cookies: dùng để quản lí cookie
+
+**server:
+1. sequelize: thư viện hỗ trợ kết nối database, thao tác với database
+thay vì viết câu query thì thư viện này cung cấp sẵn các hàm thêm sửa xóa, tạo ràng buộc,...
+2. cors: cho phép phía client sử dụng api của server mà ko bị lỗi cross origin
+3. expressjs: dùng để viết api, cho server chạy trên port 3000
+4. argon2: mã hóa password trước khi lưu vào database
+5. jsonwebtoken: tạo các token xác thực người dùng, dùng cho chức năng đăng nhập đăng kí đổi pass
+6. body-parser: parse các request từ phía web để xử lí
