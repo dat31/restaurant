@@ -4,3 +4,4 @@
 3. xem profile, sửa profile, đổi mật khẩu
 4. xem sửa xóa món ăn, tìm kiếm món ăn
 5. xem xóa đầu bếp. tìm kiếm đầu bếp
+6. phân quyền user. chỉ có admin đc chỉnh sửa hoặc xóa menu, danh sách đầu bếp
